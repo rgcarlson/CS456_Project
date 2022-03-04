@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <meta charset="utf-8" /> <!-- charset --> 
+        <meta name="viewport" content="width=device-width, initial-scale=1" /> <!-- viewport --> 
+     
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" /> <!-- Bootstrap CSS --> 
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" />
+     
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script> <!-- Bootstrap JS --> 
+        <script src="12classroom.js"></script>
+
+        <script>
+            function toggleFAQs(){
+                faqToggle=document.getElementById("switch_language");
+                boat =document.getElementById("boatOwner");
+                boatDefault =document.getElementById("boatOwnerDefault");
+                service =document.getElementById("serviceProvider");
+                
+                if(faqToggle.checked === true){
+                    while (boatDefault.firstChild) {
+                        boatDefault.removeChild(boatDefault.firstChild);
+                    }
+                          boatDefault.style.visibility = "hidden"; 
+                          boat.close();
+                          service.show();
+                }
+                else {
+                    boatDefault.style.visibility = "hidden"; 
+                    boat.show();
+                    service.close(); 
+                }
+    }
+    
+        </script>
+
+        <style>
+
+a{
+	color:white;
+	text-indent: 20px;
+	text-decoration: none;
+	font-family: "Roboto", sans-serif;
+	font-size: 1.1em;
+}
+
+h3{
+    margin-left:20px ;
+	font-size: 1em;
+    font-weight:bold;
+}
+
+.navbar-nav {
+     flex-direction: row;
+     padding-right:50px;
+}
+
+p{
+    margin-left:20px ;
+}
+
+
+.nav-link{
+	color:white;
+}
+#serviceProvider{
+    visibility:visible;
+}
+        </style>
+
+        <nav class="navbar navbar-inverse navbar-fixed-top bg-dark ">
+            <div class="container-fluid">
+            <div class="navbar-header">
+                <a href="assignment1.html"><img src = "logo.png" width = 75 height = 75></img></a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="nav-item"><a href="about.html" class="nav-link">  About  </a></li>
+                <li class = "nav-item"><a href="contact.html" class="nav-link">  Contact </a></li>
+                <li class = "nav-item"><a href="faqs.html" class="nav-link">  FAQs </a></li>
+                <li class = "nav-item"><a href="login.html" class="nav-link">  Login </a></li>
+
+            </ul>
+            <ul class="navbar-nav">
+                <!-- Switch Toggle Language Button Here -->
+                <label class="form-check-label text-white me-1" for="switch_language">Boat Owner</label>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="switch_language" onclick="toggleFAQs();">
+                    <label class="form-check-label text-white" for="switch_language">Service Provider</label>
+                </div>
+            </ul>
+        
+            </ul>
+            </div>
+        </nav>
+        
+            
+        </nav>
+
+    </head>
+    <body>
+        <div id = "boatOwnerDefault">
+            <h2> Boat Owner FAQS</h2></br>
+        <p>
+        <h3>Can I be a boat owner and a service provider with the same account?</h3>
+<p>Yes, once you sign up either a Boat Owner or a Service Provider, you will be able to add additional roles once your account is set up.  By going to the More button located at the bottom right hand corner of the app you can choose to “Add/Change Role” which will allow you to set up an additional role.  This will also allow you to change from one role to another.  
+</br></br>
+<h3>What is a boat manager?</h3>
+<p>A boat manager is anyone who you choose to help you manage your boat’s maintenance.  This person would have access to all projects and be able to create projects.</p>
+</br></br>
+<h3>Can my co-owner sign up and add projects?</h3>
+<p>Yes, they are able to add/delete and complete projects. </p>
+</br></br>
+<h3>What options do I have to pay for a project?</h3>
+<p>We currently support Visa, MC and EFT (Electronic Funds Transfer) or ACH (Automated Clearing House). There are some fees associated with a credit card purchase (3% of purchase) and 0.8% with a cap of $5 per ACH payment – this payment comes directly from your checking account.</p>
+</br></br>
+<h3>How do I verify the work has been completed and verify?</h3>
+<p>You are able see video, photographs and text via the chat function within the project.  We recommend that you work with your service provider on the best way to communicate and agree what completion means to both of you. </p>
+</br></br>
+<h3>What is a verified review?</h3>
+<p>A verified review is a review by a customer who has completed a project with the Service Provider</p>
+</br></br>
+<h3>How does the Referral & Credit work?</h3>
+<p>We encourage boat owners to ask their Service Providers to register on the FirstMate Services App.  You can either invite your Service Provider using the links within the app or give the Service Provider your Referral code.  Once the Service Provider registers and uses your Referral code you will receive a $25 credit for your next project that you do through the app.  There is a limit of $100 of credit for each Boat Owner (4 referrals).</p>
+</br></br>
+<h3>Can I request quote from multiple SPs at the same time?</h3>
+<p>We highly recommend requesting quotes from more than one Service Provider.</p></br></br>
+
+<h3>What do I do if I get multiple quotes?</h3>
+<p>We recommend that you review each quote and read the reviews of each of the Service Providers to help you make the best decision as to 
+    which Service Provider is the right one to help you with this specific project.</p>
+    </p>
+</div>
+        <dialog id = "boatOwner">
+            <h2> Boat Owner FAQS</h2></br>
+        <p>
+        <h3>Can I be a boat owner and a service provider with the same account?</h3>
+<p>Yes, once you sign up either a Boat Owner or a Service Provider, you will be able to add additional roles once your account is set up.  By going to the More button located at the bottom right hand corner of the app you can choose to “Add/Change Role” which will allow you to set up an additional role.  This will also allow you to change from one role to another.  
+</br></br>
+<h3>What is a boat manager?</h3>
+<p>A boat manager is anyone who you choose to help you manage your boat’s maintenance.  This person would have access to all projects and be able to create projects.</p>
+</br></br>
+<h3>Can my co-owner sign up and add projects?</h3>
+<p>Yes, they are able to add/delete and complete projects. </p>
+</br></br>
+<h3>What options do I have to pay for a project?</h3>
+<p>We currently support Visa, MC and EFT (Electronic Funds Transfer) or ACH (Automated Clearing House). There are some fees associated with a credit card purchase (3% of purchase) and 0.8% with a cap of $5 per ACH payment – this payment comes directly from your checking account.</p>
+</br></br>
+<h3>How do I verify the work has been completed and verify?</h3>
+<p>You are able see video, photographs and text via the chat function within the project.  We recommend that you work with your service provider on the best way to communicate and agree what completion means to both of you. </p>
+</br></br>
+<h3>What is a verified review?</h3>
+<p>A verified review is a review by a customer who has completed a project with the Service Provider</p>
+</br></br>
+<h3>How does the Referral & Credit work?</h3>
+<p>We encourage boat owners to ask their Service Providers to register on the FirstMate Services App.  You can either invite your Service Provider using the links within the app or give the Service Provider your Referral code.  Once the Service Provider registers and uses your Referral code you will receive a $25 credit for your next project that you do through the app.  There is a limit of $100 of credit for each Boat Owner (4 referrals).</p>
+</br></br>
+<h3>Can I request quote from multiple SPs at the same time?</h3>
+<p>We highly recommend requesting quotes from more than one Service Provider.</p></br></br>
+
+<h3>What do I do if I get multiple quotes?</h3>
+<p>We recommend that you review each quote and read the reviews of each of the Service Providers to help you make the best decision as to 
+    which Service Provider is the right one to help you with this specific project.</p>
+    </p>
+</dialog>
+<dialog id = "serviceProvider">
+    <h2> Service Provider FAQS</h2></br>
+    <h3>Can I be a boat owner and a service provider with the same account?</h3>
+<p>Yes, once you sign up either a Boat Owner or a Service Provider, you will be able to add additional roles once your account is set up.  
+By going to the More button located at the bottom right hand corner of the app you can choose to “Add/Change Role” which will allow you to 
+set up an additional role.  This will also allow you to change from one role to another.</p>
+
+<h3>How do I view information about my boat if I am logged in as a service provider?</h3>
+<p>You will need to go to the More button located at the bottom right of the app and select “Add/Change Role” this will show all roles 
+you are signed up as.  Select your Boat Owner Role and you will be switched to this role.  Once you are in the Boat owner role you 
+will be able to view all information regarding your boat(s) and all the projects associated with each boat. </p>
+
+<h3>Who in my company can see and/or accept/decline projects?</h3>
+<p>All Employees, Service Managers are able to see, accept, decline and create quotes. </p>
+
+<h3>Who in my company can quote a project?</h3>
+<p>Any Employee or Service Manager can quote, accept, decline or complete a project. </p>
+
+<h3>Who in my company can edit Company information?</h3>
+<p>Only the Service Provider Manager and the Service Provider Owner roles are able to edit the company information. </p>
+
+<h3>How do I get paid?</h3>
+<p>Once the project has been completed and the invoice has been paid by the customer it will take 3-5 business days for the money to be transferred 
+to your Company bank account via our secure payment system Stripe. </p>
+
+<h3>How do I ensure that a boat owner knows we have completed and verified the work?</h3>
+<p>We suggest that you use photos, video and/or text description which can all be done via the chat functions within the project.  
+We suggest that you agree on a communication plan with the end customer.</p>   
+
+<h3>What is a verified review?</h3>
+<p>A verified review is a review by a customer who has completed a project with the Service Provider</p>
+
+<h3>Can I review the boat owner?</h3>
+<p>Yes, once a project is completed you will be able to rate the boat owner with our 5-anchor rating system. </p>
+
+<h3>What do I do when I have to delay the service due to weather or an emergency service?</h3>
+<p>We suggest that you use the chat function and/or a communication channel that is agreed with the end customer.  
+Keep in mind that once you leave the app the communication will not be documented in the app. </p>
+
+</dialog>
+    </body>
+</html>
