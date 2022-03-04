@@ -1,0 +1,202 @@
+<!DOCTYPE html >
+<html>
+
+<head>
+   <meta charset="utf-8" /> <!-- charset --> 
+   <meta name="viewport" content="width=device-width, initial-scale=1" /> <!-- viewport --> 
+
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" /> <!-- Bootstrap CSS --> 
+
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script> <!-- Bootstrap JS --> 
+	
+	<style >
+body {
+    margin: 0;
+    padding: 0;
+}
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(stairs.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    filter: brightness(60%);
+}
+.hero-content {
+    position: relative; 
+    font-family: "Monserrat", sans-serif;
+    color: white;
+    text-align: center;
+    margin: 0.625rem;
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+.hero-subtitle {
+    font-size: 2rem;
+    font-weight: 200;
+    margin-top: 1rem;
+}
+
+.hero-button {
+    background-color: #EF8161;
+    color: white;
+    border: 1px solid #f19378;
+    margin-top: 5rem;
+    padding: 0.9375rem 1.875rem;
+    font-family: "Monserrat", sans-serif;
+    font-size: 1.125rem;
+    font-weight: 200;
+    cursor: pointer;
+}
+.hero-button:hover {
+    background-color: #cb376a;
+    border: 1px solid #db7598;
+};
+    color: white;
+    border: 1px solid #cb376a;
+    margin-top: 5rem;
+    padding: 0.9375rem 1.875rem;
+    font-family: "Monserrat", sans-serif;
+    font-size: 1.125rem;
+    font-weight: 200;
+    cursor: pointer;
+}
+.hero-button:hover {
+    background-color: #cb376a;
+    border: 1px solid #db7598;
+}
+
+a{
+	color:white;
+	text-indent: 20px;
+	text-decoration: none;
+	font-family: "Roboto", sans-serif;
+	font-size: 1.1em;
+}
+
+p{
+	color: white;
+}
+.navbar-nav {
+     flex-direction: row;
+}
+
+@media (max-width: 900px) {
+    navbar-position {
+        .navbar-fixed-bottom;
+    }
+}
+
+.nav-link{
+	color:white;
+}
+
+.navbar-header{
+}
+
+img{
+	background-size:cover;
+}
+
+/* primary header */
+.logo{
+	margin: 2rem;
+}
+
+.primary-header{
+	align-items:center;
+	justify-content: space-between;
+}
+
+.primary-navigation{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.primary-navigation a{
+	text-decoration: none;
+}
+
+	</style>  
+
+<nav class="navbar navbar-inverse navbar-fixed-top bg-dark ">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <img src = "logo.png" href="#" width = 75 height = 75></img>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="nav-item"><a href="#" class="nav-link">  About  </a></li>
+      <li class = "nav-item"><a href="#" class="nav-link">  Contact </a></li>
+      <li class = "nav-item"><a href="#" class="nav-link">  FAQs </a></li>
+    </ul>
+  </div>
+</nav>
+
+	
+</nav>
+
+
+</head>
+
+<body class = "home">
+
+<header class = "primary-header" data-visible="false" class="primary-navigation flex">
+
+<section class="hero">
+
+    <div class="hero-content">
+    
+       <h1 class="hero-title">
+            Boat Maintenence Made Easy
+       </h1>
+         
+       <h2 class="hero-subtitle">
+            We offer services for all needs no matter the boat!
+       </h2>
+         
+       <button type="button" class="hero-button" onclick="location.href='tours.html'">
+            Download Our App &raquo;
+       </button>
+    
+    </div>
+
+</section>
+
+<div>
+	<img src = "logo.png" ></img>
+<nav class="navbar navbar-inverse navbar-fixed-top bg-dark ">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <img src = "logo.png" href="#" width = 75 height = 75></img>
+    </div>
+    <ul id="primary-navigation" class="primary-navigation flex">
+      <li class="active"><a href="#"><span aria-hidden="true">00</span>  About  </a></li>
+      <li class = "active"><a href="#"><span aria-hidden="true">01</span>Contact </a></li>
+    </ul>
+  </div>
+</nav>
+
+</header>
+</body>
+
+
+</html>
+
