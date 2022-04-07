@@ -196,7 +196,7 @@
           </form>
 
           <script>
-            let users = [{_id:0, name:'test'}];
+            let contacts = [{_id:0, name:'test'}];
             /*** main function to ask the server for user data
                 and display it in this web page.
                 */
@@ -204,7 +204,7 @@
               let response = await fetch('http://localhost:4000/contact.html');
               //If this page is running on the same server, then just fetch('/user') would also work
         
-              users = await response.json();
+              contacts = await response.json();
               
               let out = `
               <table class="table table-striped table-hover">
@@ -216,12 +216,12 @@
                   </tr>
                 </thead>
                 <tbody>`;
-                  for(let i=0; i<users.length; i++){
+                  for(let i=0; i<contacts.length; i++){
                     out += `
                     <tr>
-                      <td> ${users[i].name} </td>
-                      <td> ${users[i].email} </td>
-                      <td> ${users[i].message} </td>
+                      <td> ${contacts[i].name} </td>
+                      <td> ${contacts[i].email} </td>
+                      <td> ${contacts[i].message} </td>
                     </tr>`;
                   }
                   out+= `</tbody>

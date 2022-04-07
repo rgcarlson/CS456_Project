@@ -1,48 +1,46 @@
 
-exports.users = require("./messages");
+exports.contacts = require("./messages");
 
 exports.readAll = function(){
-    return exports.users;
+    return exports.contacts;
 }
 
 exports.read = function( id ){
     let index = pos(id);
-    if(index >= 0 ) return exports.users[index];
+    if(index >= 0 ) return exports.contacts[index];
     else return null;
 }
 
-exports.create = function( newUser){
-    if( exports.users.length > 0)
-        newUser._id = (exports.users[ exports.users.length-1]._id) + 1
+exports.create = function( newContact){
+    if( exports.contacts.length > 0)
+        newContact._id = (exports.contacts[ exports.contacts.length-1]._id) + 1
     else
-        newUser._id = 1;
-    exports.users.push(newUser);
+        newContact._id = 1;
+    exports.contacts.push(newContact);
 
 }
 
 exports.del = function( id ) {
     let index = pos(id);
-    let deletedUser = null;
+    let deletedContact = null;
     if( index >= 0)
     {
-        exports.users.splice(index,1);
+        exports.contacts.splice(index,1);
     }
 }
 
-exports.update = function(id,newUser){
-    //leave for homework
-    if( exports.users.length > 0){
+exports.update = function(id,newContact){
+    if( exports.contacts.length > 0){
         let index = pos(id);
-        exports.users[ index ] = exports.create(newUser);
+        exports.contacts[id-1] = newContact;
     }
     else
-        newUser._id = 1;
-    exports.users.push(newUser);
+        newContact._id = 1;
 }
 
 function pos(id){
-    for( let i=0; i<exports.users.length; i++){
-        if( exports.users[i]._id === id){
+    for( let i=0; i<exports.contacts.length; i++){
+        if( exports.contacts[i]._id === id){
             //found the user with id
             return i;
         }
